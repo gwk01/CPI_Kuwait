@@ -31,7 +31,7 @@ mydate = datetime.datetime.now()
 cpi_photo=Image.open('Capture.PNG')
 #Country
 
-country = 'Bahrain'
+country = 'Kuwait'
 #missing dataframe
 missing_bool=portal[portal['Country']==country].isnull().any().to_frame().reset_index()
 last_data_month=portal[portal['Country']==country].columns[-1]
@@ -524,9 +524,9 @@ if submit:
 
         msg['From'] = fromaddr
         msg['To'] = ", ".join(toaddr)
-        msg['Subject'] = "NEW Bahrain CPI Data"
+        msg['Subject'] = "NEW Kuwait CPI Data"
 
-        body = "Kindly, find attached the recently submitted CPI Data by Bahrain NSO."
+        body = "Kindly, find attached the recently submitted CPI Data by Kuwait NSO."
 
         msg.attach(MIMEText(body, 'plain'))
         filename = "CPI_online.xlsx"
